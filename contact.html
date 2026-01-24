@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - NOSTRA</title>
+    <!-- TAILWIND CSS CDN LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky top-0 w-full bg-white p-4 flex justify-between items-center z-10">
+        <h1 class="text-4xl font-bold">Nostra</h1>
+        <div class="navbar-links hidden md:flex gap-10 text-xl">
+            <p class="navbar-link"><a href="./index.html" class="hover:underline">Home</a></p>
+            <p class="navbar-link"><a href="./index.html#newArrival" class="hover:underline">New Arrival</a></p>
+            <p class="navbar-link"><a href="./index.html#mostWanted" class="hover:underline">Most Wanted</a></p>
+            <p class="navbar-link"><a href="./collections.html" class="hover:underline">Collections</a></p>
+            <p class="navbar-link"><a href="#" class="hover:underline">Contact Us</a></p>
+        </div>
+        <div class="navbar-menu-toggle md:hidden">
+            <i id="side-navbar-activate" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+        </div>
+    </nav>
+
+    <!-- Side Navbar -->
+    <div class="side-navbar fixed top-0 left-0 w-3/5 h-full bg-gray-800 text-white p-4 transition-all duration-500 z-20"
+        style="margin-left: -60%;">
+        <p class="text-right">
+            <i id="side-navbar-close" class="fa-solid fa-xmark text-xl cursor-pointer"></i>
+        </p>
+        <div class="side-navbar-links mt-10">
+            <p class="side-navbar-link mb-5"><a href="./index.html" class="hover:underline">Home</a></p>
+            <p class="side-navbar-link mb-5"><a href="./index.html#newArrival" class="hover:underline">New Arrival</a>
+            </p>
+            <p class="side-navbar-link mb-5"><a href="./index.html#mostWanted" class="hover:underline">Most Wanted</a>
+            </p>
+            <p class="side-navbar-link mb-5"><a href="./collections.html" class="hover:underline">Collections</a></p>
+            <p class="side-navbar-link mb-5"><a href="#" class="hover:underline">Contact Us</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Contact Form -->
+        <div class="contact-form bg-gray-800 text-gray-300 rounded-lg shadow-lg w-3/5 mx-auto p-20 mt-10">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name" class="block mb-4">Name:</label>
+                <input type="text" id="name" name="name" required
+                    class="w-full p-2 border border-gray-600 rounded mb-2 bg-gray-700 text-white">
+
+                <label for="email" class="block mb-4">Email:</label>
+                <input type="text" id="email" name="email" required
+                    class="w-full p-2 border border-gray-600 rounded mb-2 bg-gray-700 text-white">
+
+                <label for="message" class="block mb-4">Message:</label>
+                <textarea id="message" name="message" required
+                    class="w-full p-2 border border-gray-600 rounded mb-2 bg-gray-700 text-white resize-vertical"
+                    style="height: 10vh;"></textarea>
+
+                <input type="submit" value="Submit"
+                    class="bg-blue-600 hover:bg-blue-700 text-white border-none rounded p-2 cursor-pointer">
+            </form>
+        </div>
+    </div>
+
+    <!-- News Letter -->
+    <div class="news text-center mt-20">
+        <h2 class="text-2xl font-bold mb-4">Join our News Letter</h2>
+        <p class="mb-4">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+        <div class="mt-4">
+            <input class="search w-full max-w-md p-2 border border-gray-900 rounded mb-2 mx-auto block" type="email"
+                placeholder="Your Email">
+        </div>
+        <div>
+            <button class="bg-gray-900 text-white rounded p-2 hover:bg-gray-800">Subscribe <i
+                    class="fa-solid fa-arrow-right ml-2"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer bg-gray-900 text-white p-10 mt-20">
+        <div class="footer-container flex flex-wrap justify-between">
+            <div class="footer-box-1 mb-6">
+                <h2 class="text-2xl font-bold mb-4">Nostra</h2>
+                <p class="mb-4">The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those
+                    interested.</p>
+                <div class="footer-icon-container flex gap-4">
+                    <i class="icon fa-brands fa-instagram text-white"></i>
+                    <i class="icon fa-brands fa-twitter text-white"></i>
+                    <i class="icon fa-brands fa-facebook text-white"></i>
+                </div>
+            </div>
+        </div>
+        <p class="subtitle text-center mt-6">@ 2023 Nostra.com</p>
+    </div>
+
+    <script src="./contact.js"></script>
+</body>
+
+</html>
