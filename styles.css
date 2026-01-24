@@ -1,0 +1,24 @@
+/* Custom styles that Tailwind 2.2.19 can't handle */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Scrollbar styling for Most Wanted section */
+.most-wanted::-webkit-scrollbar {
+    height: 8px;
+}
+
+.most-wanted::-webkit-scrollbar-thumb {
+    background-color: #1D232C;
+    border-radius: 4px;
+}
+
+/* Scroll animation classes */
+.initial-scroll-animate {
+    transition: all 3s ease;
+}
+
+.reveal-scroll-animate {
+    opacity: 0;
+}
