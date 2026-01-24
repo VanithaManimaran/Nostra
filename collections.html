@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8" />
@@ -9,86 +9,154 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
 </head>
 
 <body>
+    <!-- Offer Bar -->
+    <div class="offer-bar bg-black text-white text-lg flex gap-10 font-bold justify-center p-3">
+        <p>Sign Up and GET 20% OFF for your first Order</p>
+        <p id="offer-close" class="cursor-pointer">X</p>
+    </div>
+
     <!-- Navigation Bar -->
-    <nav class="navbar sticky top-0 w-full bg-white p-4 flex justify-between items-center z-10">
-        <h1 class="text-4xl font-bold">Nostra</h1>
-        <div class="navbar-links hidden md:flex gap-10 text-xl">
-            <p class="navbar-link"><a href="./index.html" class="hover:underline">Home</a></p>
-            <p class="navbar-link"><a href="./index.html#newArrival" class="hover:underline">New Arrival</a></p>
-            <p class="navbar-link"><a href="./index.html#mostWanted" class="hover:underline">Most Wanted</a></p>
-            <p class="navbar-link"><a href="#" class="hover:underline">Collections</a></p>
-            <p class="navbar-link"><a href="./contact.html" class="hover:underline">Contact Us</a></p>
+    <!-- <nav class="navbar sticky top-0 w-full bg-white p-4 flex justify-between items-center z-10 shadow-sm">
+            <h1 class="text-3xl font-bold">Nostra</h1>
+            <div class="navbar-links hidden md:flex gap-8 text-lg">
+                <a href="./index.html" class="hover:underline">Home</a>
+                <a href="./index.html#newArrival" class="hover:underline">New Arrival</a>
+                <a href="./index.html#mostWanted" class="hover:underline">Most Wanted</a>
+                <a href="#" class="hover:underline font-bold">Collections</a>
+                <a href="./contact.html" class="hover:underline">Contact Us</a>
         </div>
         <div class="navbar-menu-toggle md:hidden">
             <i id="side-navbar-activate" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
         </div>
-    </nav>
+    </nav> -->
 
-    <!-- Side Navbar -->
-    <div class="side-navbar fixed top-0 left-0 w-3/5 h-full bg-gray-800 text-white p-4 transition-all duration-500 z-20"
+    <div class="navbar sticky top-0 w-full z-10 flex justify-between items-center p-3 bg-white">
+        <h1 class="nav_heading text-4xl font-bold">Nostra</h1>
+    
+        <ul class="nav_menu flex text-xl gap-10">
+            <li><a href="/index.html" class="hover:underline">Home</a></li>
+            <li><a href="./index.html#newArrival" class="hover:underline">New Arrival</a></li>
+            <li><a href="./index.html#mostWanted" class="hover:underline">Most Wanted</a></li>
+            <li><a href=".#" class="hover:underline">Collections</a></li>
+            <li><a href="./contact.html" class="hover:underline">Contact US</a></li>
+        </ul>
+    </div>
+    
+    <!-- Side Navbar (Mobile) -->
+    <div class="side-navbar fixed top-0 left-0 w-3/5 h-full bg-gray-800 text-white p-5 transition-all duration-500 z-20"
         style="margin-left: -60%;">
         <p class="text-right">
-            <i id="side-navbar-close" class="fa-solid fa-xmark text-xl cursor-pointer"></i>
+            <i id="side-navbar-close" class="fa-solid fa-xmark text-2xl cursor-pointer"></i>
         </p>
-        <div class="side-navbar-links mt-10">
-            <p class="side-navbar-link mb-5"><a href="./index.html" class="hover:underline">Home</a></p>
-            <p class="side-navbar-link mb-5"><a href="./index.html#newArrival" class="hover:underline">New Arrival</a>
-            </p>
-            <p class="side-navbar-link mb-5"><a href="./index.html#mostWanted" class="hover:underline">Most Wanted</a>
-            </p>
-            <p class="side-navbar-link mb-5"><a href="#" class="hover:underline">Collections</a></p>
-            <p class="side-navbar-link mb-5"><a href="./contact.html" class="hover:underline">Contact Us</a></p>
+        <div class="side-navbar-links mt-8 space-y-6 text-lg">
+            <p><a href="./index.html" class="hover:underline">Home</a></p>
+            <p><a href="./index.html#newArrival" class="hover:underline">New Arrival</a></p>
+            <p><a href="./index.html#mostWanted" class="hover:underline">Most Wanted</a></p>
+            <p><a href="#" class="hover:underline">Collections</a></p>
+            <p><a href="./contact.html" class="hover:underline">Contact Us</a></p>
+        </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="container px-4 py-6 w-full max-w-full">
+            <div class="flex flex-col md:flex-row gap-6">
+        
+                <!-- Filter Section -->
+                <div class="filter-section w-64 flex-shrink-0 p-4 border-r border-gray-300">
+                    <h3 class="text-xl font-bold mb-4">Occasion</h3>
+                    <div class="space-y-2 mb-6">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="summer" class="w-4 h-4"> Summer
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="party" class="w-4 h-4"> Party
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="beach" class="w-4 h-4"> Beach
+                        </label>
+                    </div>
+        
+                    <h3 class="text-xl font-bold mb-4">Colors</h3>
+                    <div class="space-y-2 mb-6">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="red" class="w-4 h-4"> Red
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="blue" class="w-4 h-4"> Blue
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="white" class="w-4 h-4"> White
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="green" class="w-4 h-4"> Green
+                        </label>
+                    </div>
+        
+                    <h3 class="text-xl font-bold mb-4">Arrivals</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="new" class="w-4 h-4"> New
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tags" value="old" class="w-4 h-4"> Old
+                        </label>
+                    </div>
+                </div>
+        
+                <!-- Products Section -->
+                <div class="product-section flex-1 p-4">
+                    <div class="mb-6">
+                        <div class="flex items-center border border-gray-800 rounded-lg p-3 w-full">
+                            <input type="search" placeholder="Search products..." class="flex-1 outline-none px-2 text-lg">
+                            <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                        </div>
+                    </div>
+
+                <div class="products flex flex-wrap justify-between">
+                    <!-- Products will be dynamically inserted here by JS -->
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Collections Content -->
-    <div class="pt-20 p-5">
-        <h1 class="text-4xl font-bold text-center mb-10">Collections</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="collection-item bg-gray-200 p-4 rounded-lg">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f1.jpg" alt="Product"
-                    class="w-full h-48 object-cover rounded-lg mb-4" />
-                <h2 class="text-2xl font-bold">Collection 1</h2>
-                <p class="text-lg">Description of collection 1.</p>
-            </div>
-            <div class="collection-item bg-gray-200 p-4 rounded-lg">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f7.jpg" alt="Product"
-                    class="w-full h-48 object-cover rounded-lg mb-4" />
-                <h2 class="text-2xl font-bold">Collection 2</h2>
-                <p class="text-lg">Description of collection 2.</p>
-            </div>
-            <div class="collection-item bg-gray-200 p-4 rounded-lg">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n1.jpg" alt="Product"
-                    class="w-full h-48 object-cover rounded-lg mb-4" />
-                <h2 class="text-2xl font-bold">Collection 3</h2>
-                <p class="text-lg">Description of collection 3.</p>
-            </div>
-        </div>
+<!-- Newsletter Section -->
+<div class="news bg-gray-100 py-12 text-center mt-10">
+    <h2 class="text-3xl font-bold mb-4">Join our News Letter</h2>
+    <p class="text-lg mb-6">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+    <div class="flex justify-center gap-4 flex-wrap px-4">
+        <input type="email" placeholder="Enter your email"
+            class="px-4 py-3 border-2 border-gray-800 rounded w-full max-w-md outline-none">
+    </div>
+    <button class="mt-4 bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-gray-700 transition">
+        Subscribe <i class="fa-solid fa-arrow-right ml-2"></i>
+    </button>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-black text-white text-center p-5 mt-10">
-        <p>&copy; 2023 NOSTRA. All rights reserved.</p>
-        <div class="flex justify-center gap-5 mt-3">
-            <a href="#" class="hover:underline">Privacy Policy</a>
-            <a href="#" class="hover:underline">Terms of Service</a>
-            <a href="./contact.html" class="hover:underline">Contact</a>
+    <footer class="bg-black text-white py-10 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Nostra</h2>
+            <p class="text-gray-400 mb-6">The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for
+                those interested</p>
+            <div class="flex gap-4 mb-6">
+                <i class="fa-brands fa-instagram text-2xl cursor-pointer hover:text-gray-400"></i>
+                <i class="fa-brands fa-twitter text-2xl cursor-pointer hover:text-gray-400"></i>
+                <i class="fa-brands fa-facebook text-2xl cursor-pointer hover:text-gray-400"></i>
+            </div>
+            <p class="text-gray-500 text-sm">@ 2023 Nostra.com</p>
         </div>
     </footer>
 
-    <script src="./contact.js"></script>
+    <!-- JavaScript -->
+    <script src="collections.js"></script>
 </body>
 
 </html>
