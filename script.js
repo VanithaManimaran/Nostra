@@ -8,6 +8,23 @@ document.getElementById("offer-close").addEventListener(
   },
 );
 
+// Side navbar toggle
+var sideNavActivate = document.getElementById("side-navbar-activate");
+var sideNavClose = document.getElementById("side-navbar-close");
+var sideNavbar = document.querySelector(".side-navbar");
+
+if (sideNavActivate) {
+  sideNavActivate.addEventListener("click", function () {
+    sideNavbar.style.marginLeft = "0";
+  });
+}
+
+if (sideNavClose) {
+  sideNavClose.addEventListener("click", function () {
+    sideNavbar.style.marginLeft = "-100%";
+  });
+}
+
 var sliderleftbutton = document.getElementById("slider-left-activate");
 var sliderrightbutton = document.getElementById("slider-right-activate");
 var sliderimage = document.querySelector(".slider-image-container");
@@ -50,9 +67,11 @@ likebuttons.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     if (e.target.src.indexOf("blackheart") > 0) {
       console.log("jkjk");
-      e.target.src = "https://errormakesclever.github.io/Nostra-Ecommerce-Js/icons/redheart.png";
+      e.target.src =
+        "https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/redheart.png";
     } else {
-      e.target.src = "https://errormakesclever.github.io/Nostra-Ecommerce-Js/icons/blackheart.png";
+      e.target.src =
+        "https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png";
     }
   });
 });
@@ -69,3 +88,30 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+
+context.js;
+
+// Offer bar close
+var offerBar = document.querySelector(".offer-bar");
+var offerClose = document.getElementById("offer-close");
+if (offerClose && offerBar) {
+  offerClose.addEventListener("click", function () {
+    offerBar.style.display = "none";
+  });
+}
+
+// Side navbar toggle
+var sideNavMenu = document.getElementById("side-navbar-activate");
+var sidenavbar = document.querySelector(".side-navbar");
+if (sideNavMenu) {
+  sideNavMenu.addEventListener("click", function () {
+    sidenavbar.style.marginLeft = "0px";
+  });
+}
+
+var sideNavCloseBtn = document.getElementById("side-navbar-close");
+if (sideNavCloseBtn) {
+  sideNavCloseBtn.addEventListener("click", () => {
+    document.querySelector(".side-navbar").style.marginLeft = "-100%";
+  });
+}

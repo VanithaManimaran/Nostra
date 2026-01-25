@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="en" style="scroll-behavior: smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -13,98 +13,122 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    </head>
 
 <body>
     <!-- Offer Bar -->
     <div class="offer-bar bg-black text-white text-2xl flex gap-10 font-bold justify-center p-3">
         <p>Sign Up and GET 20% OFF for your first Order</p>
-        <p id="offer-close">X</p>
+    <p id="offer-close" class="cursor-pointer">X</p>
     </div>
+
     <!-- Navbar -->
-    <div class="navbar sticky top-0 w-full z-10 flex justify-between items-center p-3 bg-white">
+    <div class="navbar sticky top-0 w-full z-40 flex justify-between items-center p-3 bg-white">
         <h1 class="nav_heading text-4xl font-bold">Nostra</h1>
 
-        <ul class="nav_menu flex text-xl gap-10">
-            <li><a href="#" class="hover:underline">Home</a></li>
-            <li><a href="#newArrival" class="hover:underline">New Arrival</a></li>
-            <li><a href="#mostWanted" class="hover:underline">Most Wanted</a></li>
-            <li><a href="./collections.html" class="hover:underline">Collections</a></li>
-            <li><a href="./contact.html" class="hover:underline">Contact US</a></li>
+    <ul class="nav_menu hidden md:flex text-xl gap-10">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#newArrival" class="hover:underline">New Arrival</a></li>
+        <li><a href="#mostWanted" class="hover:underline">Most Wanted</a></li>
+        <li>
+            <a href="./collections.html" class="hover:underline">Collections</a>
+        </li>
+        <li><a href="./contact.html" class="hover:underline">Contact US</a></li>
         </ul>
+    <div class="navbar-menu-toggle md:hidden">
+        <i id="side-navbar-activate" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+    </div>
+    </div>
+    
+    <!-- Side Navbar (Mobile) -->
+    <div class="side-navbar fixed top-0 left-0 w-3/5 h-full bg-gray-800 text-white p-5 transition-all duration-500 z-20"
+        style="margin-left: -100%">
+        <p class="text-right">
+            <i id="side-navbar-close" class="fa-solid fa-xmark text-2xl cursor-pointer"></i>
+        </p>
+        <div class="side-navbar-links mt-8 space-y-6 text-lg">
+            <p><a href="#" class="hover:underline">Home</a></p>
+            <p><a href="#newArrival" class="hover:underline">New Arrival</a></p>
+            <p><a href="#mostWanted" class="hover:underline">Most Wanted</a></p>
+            <p>
+                <a href="./collections.html" class="hover:underline">Collections</a>
+            </p>
+            <p><a href="./contact.html" class="hover:underline">Contact Us</a></p>
+        </div>
     </div>
     <!-- Sale image -->
-    <div class="slider relative overflow-hidden w-full bg-black" style="height: 700px;">
-        <button id="slider-left-activate" class="slider-left-button absolute top-1/2 left-5 z-20 p-2">
-            <i class="fa-solid fa-angle-left text-6xl" style="color: #ffffff;"></i>
+    <div class="slider relative overflow-hidden w-full bg-black" style="height: 700px">
+        <button id="slider-left-activate" class="slider-left-button absolute top-1/2 left-5 z-5 p-2">
+            <i class="fa-solid fa-angle-left text-6xl" style="color: #ffffff"></i>
         </button>
-        <div class="slider-content absolute top-1/5 text-center w-full text-white z-10">
-            <h1 class="text-6xl font-bold">Level up your style with our</h1>
-            <h4 class="text-3xl mt-4">Summer Collections</h4>
-            <button class="bg-white text-black px-6 py-3 rounded mt-6 text-xl">Shop Now <i
-                    class="fa-solid fa-arrow-right ml-2"></i></button>
-        </div>
-        <div class="slider-image-container flex transition-transform duration-2000">
-            <img class="slider-image w-screen object-cover" style="height: 700px;"
-                src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/others/slider-one.jpg" alt="">
-            <img class="slider-image w-screen object-cover" style="height: 700px;"
-                src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/others/slider-two.jpg" alt="">
-            <img class="slider-image w-screen object-cover" style="height: 700px;"
-                src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/others/slider-three.jpg" alt="">
-        </div>
-        <button id="slider-right-activate" class="slider-right-button absolute top-1/2 right-5 z-20 p-2">
-            <i class="fa-solid fa-angle-right text-6xl" style="color: #ffffff;"></i>
+    <div class="slider-content absolute top-1/5 text-center w-full text-white z-5">
+        <h1 class="text-6xl font-bold">Level up your style with our</h1>
+        <h4 class="text-3xl mt-4">Summer Collections</h4>
+        <button class="bg-white text-black px-6 py-3 rounded mt-6 text-xl">
+            Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
         </button>
+        </div>
+    <div class="slider-image-container flex transition-transform duration-2000">
+        <img class="slider-image w-screen object-cover" style="height: 700px"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/others/slider-one.jpg" alt="" />
+        <img class="slider-image w-screen object-cover" style="height: 700px"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/others/slider-two.jpg" alt="" />
+        <img class="slider-image w-screen object-cover" style="height: 700px"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/others/slider-three.jpg" alt="" />
+    </div>
+    <button id="slider-right-activate" class="slider-right-button absolute top-1/2 right-5 z-5 p-2">
+        <i class="fa-solid fa-angle-right text-6xl" style="color: #ffffff"></i>
+    </button>
     </div>
 
     <!-- Brands -->
     <div id="brands" class="brands">
-        <h1 class="brands_title text-2xl font-bold p-3">Brands</h1>
-        <div class="brand_list flex justify-between m-5">
-            <div class="brands_items flex flex-col items-center text-center gap-2">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/behance.png"
-                    class="h-16 w-16 object-contain" />
-                <p class="text-3xl font-thin">Puma</p>
-            </div>
-            <div class="brands_items flex flex-col items-center text-center gap-2">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/adidas.png"
-                    class="h-16 w-16 object-contain" />
-                <p class="text-2xl font-thin">Adidas</p>
-            </div>
-            <div class="brands_items flex flex-col items-center text-center gap-2">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/simple.png"
-                    class="h-16 w-16 object-contain" />
-                <p class="text-2xl font-thin">Simple</p>
-            </div>
-            <div class="brands_items flex flex-col items-center text-center gap-2">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/leaves.png"
-                    class="h-16 w-16 object-contain" />
-                <p class="text-2xl font-thin">Leaves</p>
-            </div>
-            <div class="brands_items flex flex-col items-center text-center gap-2">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/behance.png"
-                    class="h-16 w-16 object-contain" />
-                <p class="text-2xl font-thin">Behance</p>
-            </div>
-            <div class="brands_items flex flex-col items-center text-center gap-2">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/twitch.png"
-                    class="h-16 w-16 object-contain" />
-                <p class="text-2xl font-thin">Twitch</p>
-            </div>
-            <div class="brands_items flex flex-col items-center text-center gap-2">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/leaves.png"
-                    class="h-16 w-16 object-contain" />
-                <p class="text-2xl font-thin">Leaves</p>
-            </div>
+    <h1 class="brands_title text-2xl font-bold p-3">Brands</h1>
+    <div class="brand_list grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 m-5">
+        <div class="brands_items flex flex-col items-center text-center gap-2">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/behance.png"
+            class="h-16 w-16 object-contain" />
+        <p class="text-3xl font-thin">Puma</p>
+        </div>
+        <div class="brands_items flex flex-col items-center text-center gap-2">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/adidas.png"
+            class="h-16 w-16 object-contain" />
+        <p class="text-2xl font-thin">Adidas</p>
+        </div>
+        <div class="brands_items flex flex-col items-center text-center gap-2">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/simple.png"
+            class="h-16 w-16 object-contain" />
+        <p class="text-2xl font-thin">Simple</p>
+        </div>
+        <div class="brands_items flex flex-col items-center text-center gap-2">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/leaves.png"
+            class="h-16 w-16 object-contain" />
+        <p class="text-2xl font-thin">Leaves</p>
+        </div>
+        <div class="brands_items flex flex-col items-center text-center gap-2">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/behance.png"
+            class="h-16 w-16 object-contain" />
+        <p class="text-2xl font-thin">Behance</p>
+        </div>
+        <div class="brands_items flex flex-col items-center text-center gap-2">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/twitch.png"
+            class="h-16 w-16 object-contain" />
+        <p class="text-2xl font-thin">Twitch</p>
+        </div>
+        <div class="brands_items flex flex-col items-center text-center gap-2">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/leaves.png"
+            class="h-16 w-16 object-contain" />
+        <p class="text-2xl font-thin">Leaves</p>
+        </div>
         </div>
     </div>
 
     <!-- Services -->
-    <div id="services" class="service mt-16">
-        <div class="service_top flex justify-between p-3">
+    <div id="services" class="service mt-16 initial-scroll-animate reveal-scroll-animate">
+        <div class="service_top flex flex-col md:flex-row md:justify-between p-3 space-y-4 md:space-y-0">
             <div class="service_top__leftbar">
                 <h1 class="font-bold text-4xl">We Provide Best</h1>
                 <h1 class="font-bold text-4xl">Customer Experiences</h1>
@@ -116,78 +140,95 @@
             </div>
         </div>
 
-        <div class="service_bottom p-3 grid grid-cols-4 gap-6">
-            <div class="bg-gray-200 p-4 rounded-lg">
-                <i style="font-size: 3vw; margin-bottom: 10px" class="fa-regular fa-circle-check"></i>
-                <h4 class="font-bold text-2xl">Original Products</h4>
-                <p class="text-xl font-thin">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-            </div>
+    <div class="service_bottom p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-200 p-4 rounded-lg">
+        <i style="font-size: 3vw; margin-bottom: 10px" class="fa-regular fa-circle-check"></i>
+        <h4 class="font-bold text-2xl">Original Products</h4>
+        <p class="text-xl font-thin">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
 
-            <div class="bg-gray-200 p-4 rounded-lg">
-                <i style="font-size: 3vw; margin-bottom: 10px" class="fa-regular fa-face-smile"></i>
-                <h4 class="font-bold text-2xl">Original Products</h4>
-                <p class="text-xl font-thin">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-            </div>
+        <div class="bg-gray-200 p-4 rounded-lg">
+        <i style="font-size: 3vw; margin-bottom: 10px" class="fa-regular fa-face-smile"></i>
+        <h4 class="font-bold text-2xl">Original Products</h4>
+        <p class="text-xl font-thin">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
 
-            <div class="bg-gray-200 p-4 rounded-lg">
-                <i style="font-size: 3vw; margin-bottom: 10px" class="fa-solid fa-broom"></i>
-                <h4 class="font-bold text-2xl">Original Products</h4>
-                <p class="text-xl font-thin">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-            </div>
+        <div class="bg-gray-200 p-4 rounded-lg">
+        <i style="font-size: 3vw; margin-bottom: 10px" class="fa-solid fa-broom"></i>
+        <h4 class="font-bold text-2xl">Original Products</h4>
+        <p class="text-xl font-thin">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
 
-            <div class="bg-gray-200 p-4 rounded-lg">
-                <i style="font-size: 3vw; margin-bottom: 10px" class="fa-solid fa-truck-fast"></i>
-                <h4 class="font-bold text-2xl">Original Products</h4>
-                <p class="text-xl font-thin">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-            </div>
+        <div class="bg-gray-200 p-4 rounded-lg">
+        <i style="font-size: 3vw; margin-bottom: 10px" class="fa-solid fa-truck-fast"></i>
+        <h4 class="font-bold text-2xl">Original Products</h4>
+        <p class="text-xl font-thin">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
         </div>
     </div>
 
     <!-- New Arrival -->
     <div id="newArrival" class="initial-scroll-animate">
-        <h1 class="brands_title text-2xl font-bold p-3">New Arrivals</h1>
+    <h1 class="brands_title text-2xl font-bold p-3">New Arrivals</h1>
 
-        <div class="new-arrival flex justify-center gap-5">
-            <div class="new-arrival-container relative inline-block">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f1.jpg" alt=""
-                    class="rounded-lg object-cover" />
-                <button class="bg-white text-black text-lg rounded absolute px-4 py-2"
-                    style="left: 50%; top: 50%; transform: translate(-50%, -50%)">
-                    Shop Now <i class="fa-solid fa-arrow-right"></i>
-                </button>
+    <div class="new-arrival grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full px-4">
+        <div class="new-arrival-container relative overflow-hidden rounded-lg">
+            <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f1.jpg" alt=""
+                class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-10 rounded-[2%] pointer-events-none"></div>
+            <button
+                class="bg-white text-black text-lg rounded absolute px-5 py-2 whitespace-nowrap flex items-center gap-2 z-30"
+                style="left: 50%; top: 50%; transform: translate(-50%, -50%)">
+            Shop Now <i class="fa-solid fa-arrow-right hidden sm:inline"></i>
+            </button>
             </div>
-            <div class="new-arrival-container relative inline-block">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f7.jpg" alt=""
-                    class="rounded-lg bject-cover">
-                <button class="bg-white text-black text-lg rounded absolute px-4 py-2"
-                    style="left: 50%; top: 50%; transform: translate(-50%, -50%)"> Shop Now <i
-                        class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <div class="new-arrival-container relative inline-block">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f1.jpg" alt=""
-                    class="rounded-lg bject-cover">
-                <button class="bg-white text-black text-lg rounded absolute px-4 py-2"
-                    style="left: 50%; top: 50%; transform: translate(-50%, -50%)"> Shop Now <i
-                        class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <div class="new-arrival-container relative inline-block">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n7.jpg" alt=""
-                    class="rounded-lg bject-cover">
-                <button class="bg-white text-black text-lg rounded absolute px-4 py-2"
-                    style="left: 50%; top: 50%; transform: translate(-50%, -50%)"> Shop Now <i
-                        class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
+        <div class="new-arrival-container relative overflow-hidden rounded-lg">
+            <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f7.jpg" alt=""
+                class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-10 rounded-[2%] pointer-events-none"></div>
+            <button
+                class="bg-white text-black text-lg rounded absolute px-5 py-2 whitespace-nowrap flex items-center gap-2 z-30"
+                style="left: 50%; top: 50%; transform: translate(-50%, -50%)">
+                Shop Now <i class="fa-solid fa-arrow-right hidden sm:inline"></i>
+            </button>
+        </div>
+        <div class="new-arrival-container relative overflow-hidden rounded-lg">
+            <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f1.jpg" alt=""
+                class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-10 rounded-[2%] pointer-events-none"></div>
+            <button
+                class="bg-white text-black text-lg rounded absolute px-5 py-2 whitespace-nowrap flex items-center gap-2 z-30"
+                style="left: 50%; top: 50%; transform: translate(-50%, -50%)">
+                Shop Now <i class="fa-solid fa-arrow-right hidden sm:inline"></i>
+            </button>
+        </div>
+        <div class="new-arrival-container relative overflow-hidden rounded-lg">
+            <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n7.jpg" alt=""
+                class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-10 rounded-[2%] pointer-events-none"></div>
+            <button
+                class="bg-white text-black text-lg rounded absolute px-5 py-2 whitespace-nowrap flex items-center gap-2 z-30"
+                style="left: 50%; top: 50%; transform: translate(-50%, -50%)">
+                Shop Now <i class="fa-solid fa-arrow-right hidden sm:inline"></i>
+            </button>
+        </div>
+        <div class="new-arrival-container relative overflow-hidden rounded-lg">
+            <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n3.jpg" alt=""
+                class="w-full h-80 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-10 rounded-[2%] pointer-events-none"></div>
+            <button
+                class="bg-white text-black text-lg rounded absolute px-5 py-2 whitespace-nowrap flex items-center gap-2 z-30"
+                style="left: 50%; top: 50%; transform: translate(-50%, -50%)">
+                Shop Now <i class="fa-solid fa-arrow-right hidden sm:inline"></i>
+            </button>
         </div>
     </div>
     </div>
@@ -195,98 +236,137 @@
     <!-- Most wanted -->
 
     <div class="initial-scroll-animate reveal-scroll-animate px-4">
-        <h2 id="mostWanted" class="text-3xl font-bold pl-3 mt-12">Most Wanted</h2>
+    <h2 id="mostWanted" class="text-3xl font-bold pl-3 mt-12">Most Wanted</h2>
 
-        <div class="most-wanted flex gap-5 overflow-x-auto mt-6 p-3">
+    <div class="most-wanted flex gap-5 overflow-x-auto mt-6 p-3">
+        <div class="relative flex-shrink-0">
+            <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n8.jpg" alt="" class="w-64 rounded" />
+        
+            <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+                sale
+            </p>
+            <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+                src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
 
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n8.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
+        <div class="relative flex-shrink-0">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f1.jpg" alt="" class="w-64 rounded" />
+        <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+            sale
+        </p>
+        <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
+
+        <div class="relative flex-shrink-0">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n1.jpg" alt="" class="w-64 rounded" />
+        <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+            sale
+        </p>
+        <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
+
+        <div class="relative flex-shrink-0">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n7.jpg" alt="" class="w-64 rounded" />
+        <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+            sale
+        </p>
+        <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
+
+        <div class="relative flex-shrink-0">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n3.jpg" alt="" class="w-64 rounded" />
+        <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+            sale
+        </p>
+        <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
+
+        <div class="relative flex-shrink-0">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f7.jpg" alt="" class="w-64 rounded" />
+        <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+            sale
+        </p>
+        <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
+
+        <div class="relative flex-shrink-0">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n4.jpg" alt="" class="w-64 rounded" />
+        <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+            sale
+        </p>
+        <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
+
+        <div class="relative flex-shrink-0">
+        <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n7.jpg" alt="" class="w-64 rounded" />
+        <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
+            sale
+        </p>
+        <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
+            src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="" />
+        </div>
+        </div>
+        </div>
+
+    <!-- Limited Offer -->
+    <div class="limited-offer mt-10 px-4 md:px-10 lg:px-16 initial-scroll-animate reveal-scroll-animate">
+        <div class="flex flex-col md:flex-row overflow-hidden bg-gray-900">
+            <div class="w-full md:w-1/2">
+                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/others/offer.jpg" alt="Limited Offer"
+                    class="w-full h-full object-cover" />
             </div>
-
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f1.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
+            <div
+                class="w-full md:w-1/2 text-white flex flex-col justify-center items-start md:items-left py-16 px-6 md:px-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Limited Offer</h2>
+                <h4 class="text-xl md:text-2xl mb-8">
+                    35% OFF on this for the first 30 Customers
+                </h4>
+                <button class="bg-white text-black px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition">
+                    Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
             </div>
-
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n1.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
-            </div>
-
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n7.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
-            </div>
-
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n3.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
-            </div>
-
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/f7.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
-            </div>
-
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n4.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
-            </div>
-
-            <div class="relative flex-shrink-0">
-                <img src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/products/n7.jpg" alt=""
-                    class="w-64 rounded">
-                <p class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold uppercase">
-                    sale</p>
-                <img class="like-button absolute bottom-4 right-3 w-8 cursor-pointer hover:scale-110 transition-transform"
-                    src="https://errormakesclever.github.io/Nostra-Ecommerce-Js/img/icons/blackheart.png" alt="">
-            </div>
-
         </div>
     </div>
 
+    <!-- Newsletter Section -->
+    <div class="news bg-gray-100 py-12 text-center mt-10">
+        <h2 class="text-3xl font-bold mb-4">Join our News Letter</h2>
+        <p class="text-lg mb-6">
+            Signup for our email newspaper to get exclusive discounts, updates, and
+            more
+        </p>
+        <div class="flex justify-center gap-4 flex-wrap px-4">
+            <input type="email" placeholder="Enter your email"
+                class="px-4 py-3 border-2 border-gray-800 rounded w-full max-w-md outline-none" />
+    </div>
+    <button class="mt-4 bg-gray-800 text-white px-6 py-3 rounded-lg text-lg hover:bg-gray-700 transition">
+        Subscribe <i class="fa-solid fa-arrow-right ml-2"></i>
+    </button>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-black text-white text-center p-5 mt-10">
-        <p>&copy; 2023 NOSTRA. All rights reserved.</p>
-        <div class="flex justify-center gap-5 mt-3">
-            <a href="#" class="hover:underline">Privacy Policy</a>
-            <a href="#" class="hover:underline">Terms of Service</a>
-            <a href="./contact.html" class="hover:underline">Contact</a>
+    <footer class="bg-black text-white py-10 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Nostra</h2>
+            <p class="text-gray-400 mb-6">
+                The Standard chunk of Lorem ipsum used since the 1500s is reproduced
+                below for those interested
+            </p>
+            <div class="flex gap-4 mb-6">
+                <i class="fa-brands fa-instagram text-2xl cursor-pointer hover:text-gray-400"></i>
+                <i class="fa-brands fa-twitter text-2xl cursor-pointer hover:text-gray-400"></i>
+                <i class="fa-brands fa-facebook text-2xl cursor-pointer hover:text-gray-400"></i>
+            </div>
+            <p class="text-gray-500 text-sm">@ 2023 Nostra.com</p>
         </div>
     </footer>
 </body>
 
 <script src="script.js"></script>
-
 </html>
-
-

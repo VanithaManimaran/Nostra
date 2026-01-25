@@ -7,3 +7,12 @@ sideNavMenu.addEventListener("click", function () {
 document.getElementById("side-navbar-close").addEventListener("click", () => {
   document.querySelector(".side-navbar").style.marginLeft = "-60%";
 });
+
+// Offer bar close
+var offerBar = document.querySelector(".offer-bar");
+var offerClose = document.getElementById("offer-close");
+if (offerClose && offerBar) {
+  offerClose.addEventListener("click", function () {
+    offerBar.style.display = "none";
+  });
+}
