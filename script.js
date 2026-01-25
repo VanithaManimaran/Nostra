@@ -18,6 +18,11 @@ if (sideNavActivate) {
     sideNavbar.style.marginLeft = "0";
   });
 }
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 768) {
+    sideNavbar.style.marginLeft = "-100%";
+  }
+});
 
 if (sideNavClose) {
   sideNavClose.addEventListener("click", function () {

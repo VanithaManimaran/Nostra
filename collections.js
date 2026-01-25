@@ -92,6 +92,11 @@ if (sideNavMenu) {
     sidenavbar.style.marginLeft = "0px";
   });
 }
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 768) {
+    sideNavbar.style.marginLeft = "-100%";
+  }
+});
 
 var sideNavClose = document.getElementById("side-navbar-close");
 if (sideNavClose) {

@@ -16,3 +16,26 @@ if (offerClose && offerBar) {
     offerBar.style.display = "none";
   });
 }
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 768) {
+    sideNavbar.style.marginLeft = "-100%";
+  }
+});
+
+// Side navbar toggle
+var sideNavActivate = document.getElementById("side-navbar-activate");
+var sideNavClose = document.getElementById("side-navbar-close");
+var sideNavbar = document.querySelector(".side-navbar");
+
+if (sideNavActivate) {
+  sideNavActivate.addEventListener("click", function () {
+    sideNavbar.style.marginLeft = "0";
+  });
+}
+
+if (sideNavClose) {
+  sideNavClose.addEventListener("click", function () {
+    sideNavbar.style.marginLeft = "-100%";
+  });
+}
